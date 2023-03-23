@@ -1,11 +1,11 @@
 from config import bot
 from aiogram import types, Dispatcher
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from keyboards.client_kb import start_markup
+from keyboards1.client_kb import start_markup
 
 
 async def start_command(message: types.Message):
-    await message.answer("Hello world!", reply_markup=start_markup)
+    await message.answer("Hello!", reply_markup=start_markup)
 
 
 

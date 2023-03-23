@@ -22,3 +22,17 @@ start_markup.add(
     share_contact,
     mem_button
 )
+submit_markup = ReplyKeyboardMarkup(
+    resize_keyboard=True,
+    one_time_keyboard=True,
+).add(
+    KeyboardButton('ДА'),
+    KeyboardButton('НЕТ')
+)
+cancel_button = KeyboardButton('Cancel')
+cancel_markup = ReplyKeyboardMarkup(
+    resize_keyboard=True,
+    one_time_keyboard=True,
+).add(
+    cancel_button
+)

@@ -1,6 +1,6 @@
-from config import bot,dp
-from aiogram import types,Dispatcher
-from aiogram.types import InlineKeyboardButton,InlineKeyboardMarkup
+from config import bot, dp
+from aiogram import types, Dispatcher
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 async def quiz_2(call: types.CallbackQuery):
@@ -56,7 +56,7 @@ async def quiz_3(call: types.CallbackQuery):
     )
 
 async def quiz_4(call: types.CallbackQuery):
-    question = "your mom know what are you gay?"
+    question = "ты за мир?"
     answer = [
         "no",
         "yes",
@@ -72,7 +72,7 @@ async def quiz_4(call: types.CallbackQuery):
         is_anonymous=False,
         type='quiz',
         correct_option_id=1,
-        explanation="было очевидно",
+        explanation="подумай еше",
         open_period=10,
     )
 
