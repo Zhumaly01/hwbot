@@ -2,6 +2,7 @@ from config import bot
 from aiogram import types, Dispatcher
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from keyboards1.client_kb import start_markup
+from wed import get_message
 
 
 async def start_command(message: types.Message):
@@ -44,9 +45,11 @@ async def quiz_1(message: types.Message):
         open_period=5,
         reply_markup=markup
     )
-
+async def find(message: types.Message):
+    await message.answer(get_message(message))
 def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(start_command, commands=['start'])
     dp.register_message_handler(help_command, commands=['help'])
     dp.register_message_handler(quiz_1, commands=['quiz'])
     dp.register_message_handler(mem, commands=['mem'])
+    dp.register_message_handler(find,commands=['np'])
